@@ -4,6 +4,7 @@ from UI.alert import AlertManager
 class View:
     def __init__(self, page: ft.Page):
 
+        self._btnCreateGraph = None
         self._page = page
         self._page.title = "Programmazione Avanzata - Primo Appello - iTunes"
         self._page.horizontal_alignment = "CENTER"
@@ -73,3 +74,10 @@ class View:
 
     def update_page(self):
         self._page.update()
+
+    @property
+    def btnCreateGraph(self):
+        return self._btnCreateGraph
+
+    def update(self):
+        pass
